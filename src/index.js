@@ -10,9 +10,8 @@ root.render(
   <React.StrictMode>
     <GithubProvider>
       <Auth0Provider
-        domain="dev-pahsgtx6isvasb45.us.auth0.com"
-        vNLZfjoWZTCNa5OwH6Hp5wDxsPuBiUFE
-        clientId="vNLZfjoWZTCNa5OwH6Hp5wDxsPuBiUFE"
+        domain={process.env.REACT_APP_AUTH0_DOMAIN}
+        clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
         authorizationParams={{
           redirect_uri: window.location.origin,
         }}
