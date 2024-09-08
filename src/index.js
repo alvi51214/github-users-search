@@ -9,7 +9,16 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <GithubProvider>
-      <App />
+      <Auth0Provider
+        domain="dev-pahsgtx6isvasb45.us.auth0.com"
+        vNLZfjoWZTCNa5OwH6Hp5wDxsPuBiUFE
+        clientId="vNLZfjoWZTCNa5OwH6Hp5wDxsPuBiUFE"
+        authorizationParams={{
+          redirect_uri: window.location.origin,
+        }}
+      >
+        <App />
+      </Auth0Provider>
     </GithubProvider>
   </React.StrictMode>
 );
